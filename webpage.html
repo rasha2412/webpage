@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SIES(Nerul) College of Arts, Science and Commerce (Autonomous)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #004080;
+            padding: 15px 0;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav:hover {
+            background-color: #003366;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 400px;
+            background-image: url('siesnerul.JPG');
+            background-size: cover;
+        }
+        .hero h1 {
+            font-size: 48px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-2px);
+        }
+        .announcements, .events {
+            background-color: #e7f1ff;
+            border-left: 5px solid #00539C;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .departments {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .departments div {
+            width: 30%;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .departments div:hover {
+            transform: translateY(-5px);
+        }
+        .departments h3 {
+            margin-bottom: 15px;
+        }
+        .events div {
+            display: inline-block;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .events div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .admissions, .contact {
+            background-color: #f4f4f4;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #00539C;
+            outline: none;
+        }
+        form input[type="submit"] {
+            background-color: #00539C;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        form input[type="submit"]:hover {
+            background-color: #003366;
+            transform: translateY(-2px);
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .timetable {
+            display: none;
+            margin-top: 20px;
+            background-color: #e7f1ff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SIES(Nerul) College of Arts, Science and Commerce (Autonomous)</h1>
+    <p id="welcome-message"></p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#departments">Departments</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact Us</a>
+</nav><br><br>
+<center>
+<img src="sieslogo.jpeg" style="width:1500px;height:350px;">
+</center><br>
+<marquee width="100%" id="GFG">
+    Feel free to Contact us on: ascnsies@sies.edu.in / (022) 61196414/15
+</marquee>
+
+<section class="announcements">
+    <h3>Latest Announcements</h3>
+    <p>Admissions are now open for 2024. Register today!</p>
+    <p>Upcoming webinar on AI and Machine Learning - Join us!</p>
+</section>
+
+<section id="departments">
+    <h2>Departments</h2>
+    <div class="departments">
+        <div>
+            <h3>Computer Science</h3>
+            <p>Explore our courses in Computer Science, Data Science, and Information technology.</p>
+            <button onclick="toggleTimetable('Computer Science-timetable')">Show Timetable</button>
+            <div id="Computer Science-timetable" class="timetable">
+                <h4>Timetable:</h4>
+                <ul>
+                    <li>Python Programming</li>
+                    <li>Web Technology</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Information Technology</h3>
+            <p>Innovate with our state-of-the-IT programs.</p>
+            <button onclick="toggleTimetable('Information technology-timetable')">Show Timetable</button>
+            <div id="Information technology-timetable" class="timetable">
+                <h4>Timetable:</h4>
+                <ul>
+                    <li>Descriptive Statistics</li>
+                    <li>Green IT</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Data Science</h3>
+            <p>Dive into data analytics, coding, and statistics with expert faculty.</p>
+            <button onclick="toggleTimetable('Data Science-timetable')">Show Timetable</button>
+            <div id="Data Science-timetable" class="timetable">
+                <h4>Timetable:</h4>
+                <ul>
+                    <li>Fundamentals of Data Science</li>
+                    <li>Python Programming</li>
+                    <li>Data Analytics</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="events">
+    <h3>Upcoming Events</h3>
+    <div>
+        <h4>Annual Cultural Fest</h4>
+        <p>Join us for music, dance, and cultural activities - December 2024</p>
+    </div>
+    <div>
+        <h4>Tech Symposium</h4>
+        <p>Showcase your technical skills at our tech event - January 2025</p>
+    </div>
+    <div>
+        <h4>Alumni Meet</h4>
+        <p>Reconnect with former students and professors - March 2025</p>
+    </div>
+</section>
+
+<section id="admissions" class="admissions">
+    <h2>Admissions</h2>
+    <p>Join our prestigious institution and take the next step towards a successful career.</p>
+    <p>Admission open for the year 2024. Apply now!</p>
+    <form id="admission-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="course" placeholder="Preferred Course" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Apply">
+    </form>
+    <p id="admission-form-message" style="color: green; display: none;"></p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+    </form>
+    <p id="form-message" style="color: green; display: none;"></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 SIES(Nerul) College of Arts, Science and Commerce (Autonomous) - All Rights Reserved</p>
+</footer>
+
+<script>
+    window.onload = function() {
+        // Prompt for the user's name
+        let userName = prompt("Welcome to SIES College! Please enter your name:");
+        if (userName) {
+            document.getElementById('welcome-message').innerText = `Welcome, ${userName}!`;
+        } else {
+            document.getElementById('welcome-message').innerText = "Welcome to SIES College!";
+        }
+
+        // Form submission handling for contact form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('form-message').innerText = "Thank you for your message, we will get back to you soon!";
+            document.getElementById('form-message').style.display = "block";
+            this.reset();
+        });
+
+        // Form submission handling for admissions form
+        document.getElementById('admission-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('admission-form-message').innerText = "Thank you for your application! We will review it shortly.";
+            document.getElementById('admission-form-message').style.display = "block";
+            this.reset();
+        });
+    };
+
+    // Toggle timetable visibility
+    function toggleTimetable(timetableId) {
+        const timetable = document.getElementById(timetableId);
+        if (timetable.style.display === "none" || timetable.style.display === "") {
+            timetable.style.display = "block";
+        } else {
+            timetable.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
